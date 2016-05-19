@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/NormalPadding"
+    android:background="@color/gray_second"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_record"
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:paddingLeft="20dp"
+        android:background="@color/lightgray"
+        android:text="最近30天金币交易记录" />
+
+    <com.cn.coachs.util.refreshlistview.XListView
+        android:id="@+id/list_coin_record"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/lightgray"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent" >
+    </com.cn.coachs.util.refreshlistview.XListView>
+
+</LinearLayout>

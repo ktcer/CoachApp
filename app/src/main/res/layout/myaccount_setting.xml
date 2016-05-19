@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:orientation="vertical"
+    android:paddingBottom="1dip" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/LargerPadding"
+        android:orientation="vertical" >
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/help_center"
+            style="@style/settings_item_layout_single"
+            app:item_showDivider="true"
+            app:item_titleText="帮助中心" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/about_us"
+            style="@style/settings_item_layout_single"
+            app:item_showDivider="false"
+            app:item_titleText="关于我们" />
+
+        <com.cn.coachs.util.FButton
+            android:id="@+id/unload_informationMange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/NormalListHeight"
+            android:layout_marginLeft="@dimen/LargePadding"
+            android:layout_marginRight="@dimen/LargePadding"
+            android:gravity="center"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="退出登录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            fbutton:buttonColor="@color/red"
+            fbutton:shadowEnabled="false" />
+    </LinearLayout>
+
+   
+</LinearLayout>

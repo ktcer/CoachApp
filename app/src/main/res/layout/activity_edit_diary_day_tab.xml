@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/NormalIconSize"
+        android:background="@color/gainsboro"
+        android:gravity="center"
+        android:text="提示：点击天数，进入编辑"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/bladeview_fontsize" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"  
+        android:dividerHeight="2dp"        
+        android:scrollbars="none" >
+    </ListView>
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <GridView -->
+    <!-- android:id="@+id/grid" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:gravity="center" -->
+    <!-- android:horizontalSpacing="5dp" -->
+    <!-- android:scrollbars="none" -->
+    <!-- android:numColumns="7" -->
+    <!-- android:stretchMode="columnWidth" -->
+    <!-- android:verticalSpacing="10dp" > -->
+    <!-- </GridView> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第1周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第2周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第3周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第4周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第5周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第6周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第7周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/NormalListHeight" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="9" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="第8周" -->
+    <!-- android:textSize="@dimen/text_list_title" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginRight="2.5dp" -->
+    <!-- android:layout_weight="2" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第\n1\n天" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+
+
+    <!-- <coachsl.FButton -->
+    <!-- android:id="@+id/one_one" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_margin="2.5dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:minHeight="@dimen/demo_button_min_height" -->
+    <!-- android:text="第" -->
+    <!-- android:textColor="@android:color/black" -->
+    <!-- android:textSize="16sp" -->
+    <!-- fbutton:buttonColor="@color/navibar_background" -->
+    <!-- fbutton:shadowEnabled="false" /> -->
+    <!-- <include layout="@layout/activity_edit_diary_day_tabrow" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+
+</LinearLayout>

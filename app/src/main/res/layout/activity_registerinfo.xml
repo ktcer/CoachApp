@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="15dip" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/lightgray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_name"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的姓名"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:id="@+id/delete_Name"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/border" >
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:text="性别：" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="性别"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.cn.coachs.util.radioandcheckbox.widget.RadioButton
+                        android:id="@+id/radioMale"
+                        style="@style/carbon_RadioButton"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/settings_male"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.cn.coachs.util.radioandcheckbox.widget.RadioButton
+                        android:id="@+id/radioFemale"
+                        style="@style/carbon_RadioButton"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/settings_female"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/age"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="生日（2016-12-21）"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null"
+                    android:editable="false"/>
+                <!--<coachsl.superdatepicker.CustomNumberPicker-->
+                    <!--android:id="@+id/register_section"-->
+                    <!--style="@android:style/Widget.Holo.Light.Spinner"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/SmallListHeight"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:focusable="false"-->
+                    <!--android:gravity="center_vertical|left"-->
+                    <!--android:hint="请选择您所在地区"-->
+                    <!--android:paddingRight="40dip"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textCursorDrawable="@null" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_hospital"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="运动类型"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" 
+                    android:editable="false"/>
+
+                <ImageView
+                    android:id="@+id/delete_hospital"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_cardnum"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的职称"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:id="@+id/delete_position"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_goodat"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的擅长"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:id="@+id/delete_goodat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_commod"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入推荐码"
+                    android:inputType="number"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:id="@+id/delete_commod"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="3.5"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="医院" />
+
+                <Spinner
+                    android:id="@+id/choseHosptial"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border" >
+
+                <EditText
+                    android:id="@+id/register_introduction"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请用一句话介绍自己"
+                    android:textColorHint="@color/font_gray"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:id="@+id/delete_introduction"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/txt_clear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:text="上传头像" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/image_certification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:src="@drawable/bt_add_pic" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dip"
+                android:gravity="center" >
+
+                <com.cn.coachs.util.progressbutton.iml.ActionProcessButton
+                    android:id="@+id/submit_Register"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="@string/registerbtntext"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    custom:pb_colorComplete="@color/lightgreen"
+                    custom:pb_colorNormal="@color/blue_second"
+                    custom:pb_colorPressed="@color/progressbutton_presscolor"
+                    custom:pb_colorProgress="@color/fbutton_color_sun_flower"
+                    custom:pb_textComplete="@string/register_Success"
+                    custom:pb_textProgress="@string/register_Loading" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

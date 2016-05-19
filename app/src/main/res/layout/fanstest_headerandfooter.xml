@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_marginTop="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="评测详情"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+            <!-- 横线 -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dip"
+                android:background="@color/font_gray" />
+    </LinearLayout>
+
+    <com.cn.coachs.util.FButton
+        android:visibility="gone"
+        android:id="@+id/btn_startSetDiary"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:text="制定方案"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        fbutton:buttonColor="@color/blue_second"
+        fbutton:cornerRadius="1dp"
+        fbutton:shadowEnabled="false" />
+
+</LinearLayout>

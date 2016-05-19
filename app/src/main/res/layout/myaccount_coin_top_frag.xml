@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip"
+    android:background="@color/navibar_background"
+    android:layout_margin="@dimen/NormalPadding"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray_second"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/NormalPadding"
+        android:text="当前金币" />
+
+    <TextView
+        android:id="@+id/coin_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:paddingLeft="10dip"
+        android:background="@color/gray_second"
+        android:text="0个"
+        android:textColor="@color/red"
+        android:textSize="30dip" />
+
+    <Button
+        android:id="@+id/exchange"
+        style="@style/text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/lightgreen"
+        android:gravity="center"
+        android:text="兑换 "
+        android:textColor="@color/white" />
+
+</LinearLayout>

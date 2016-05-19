@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top"
+         />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/text_style_nosingleLine"
+            android:id="@+id/Btn_textrimend_fb"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/gotoProgram_text"
+            android:layout_width="match_parent"
+            android:layout_height="60.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dip"
+            android:gravity="center"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="进入应用"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="@color/blue_third"
+             />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_second"
+        android:fadingEdge="none"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/item_pic"
+                style="@style/settings_item_layout_single"
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:background="@drawable/setting_item_selector"
+                android:gravity="center_vertical"
+                android:padding="10dip">
+
+                <com.cn.coachs.util.CircleImageView
+                    android:id="@+id/pic"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_toLeftOf="@id/arrow"
+                    app:border_color="@color/whitesmoke"
+                    app:border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2dip"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/arrow" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:text="@string/avatar_desc" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/item_mytel"
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="none"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/person_tel" />
+
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/person_name">
+
+                    <EditText
+                        android:id="@+id/item_myname"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/person_sex">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_mysex"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="false"
+                    app:item_titleText="@string/person_birth">
+
+                    <com.cn.coachs.util.superdatepicker.DatePicker
+                        android:id="@+id/item_mybirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/person_section">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_mysection"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="教授时间">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_mytime"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/item_address"
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="none"
+                    app:item_showDivider="true"
+                    app:item_titleText="课堂地址">
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="个人简介">
+
+                    <EditText
+                        android:id="@+id/item_myhospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:singleLine="true"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="获奖经历">
+
+                    <EditText
+                        android:id="@+id/item_myposition"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:singleLine="true"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dip">
+                    <com.cn.coachs.util.FButton
+                        android:layout_width="match_parent"
+                        android:id="@+id/submit_button"
+                        android:layout_height="45dp"
+                        android:text="完成"
+                        android:minHeight="@dimen/demo_button_min_height"
+                        android:minWidth="@dimen/demo_button_min_width"
+                        android:visibility="gone"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        fbutton:buttonColor="@color/blue_second"
+                        fbutton:cornerRadius="1dp"
+                        fbutton:shadowEnabled="false" />
+                </LinearLayout>
+                <!--<coachschat.common.view.SettingItem-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="true"-->
+                <!--app:item_titleText="@string/person_goodat">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/item_mygoodat"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/SmallListHeight"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@drawable/trans_setting_item_selector"-->
+                <!--android:focusable="false"-->
+                <!--android:gravity="center_vertical|right"-->
+                <!--android:paddingLeft="80dip"-->
+                <!--android:paddingRight="40dip"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/font_gray"-->
+                <!--android:textCursorDrawable="@null"-->
+                <!--android:textSize="14sp" />-->
+                <!--</coachschat.common.view.SettingItem>-->
+
+                <!--<coachschat.common.view.SettingItem-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="true"-->
+                <!--app:item_titleText="@string/person_introduction">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/item_myintroduction"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/SmallListHeight"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@drawable/trans_setting_item_selector"-->
+                <!--android:focusable="false"-->
+                <!--android:gravity="center_vertical|right"-->
+                <!--android:paddingLeft="80dip"-->
+                <!--android:paddingRight="40dip"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/font_gray"-->
+                <!--android:textCursorDrawable="@null"-->
+                <!--android:textSize="14sp" />-->
+                <!--</coachschat.common.view.SettingItem>-->
+
+                <!--<coachschat.common.view.SettingItem-->
+                <!--android:id="@+id/item_myphoto"-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="false"-->
+                <!--app:item_titleText="@string/person_photo"></coachschat.common.view.SettingItem>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_second"
+        android:fadingEdge="none"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/item_mytel"
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程名">
+
+                    <EditText
+                        android:id="@+id/course_name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:hint="课程名称不超过4个字"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程价格">
+
+                    <EditText
+                        android:id="@+id/item_finalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:inputType="number"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程功效">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_course_function"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:hint=""
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程分类">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_course_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:hint=""
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="服务类型">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_serve_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/item_aim"
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="none"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程目的">
+
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程开始日期">
+
+                    <com.cn.coachs.util.superdatepicker.DatePicker
+                        android:id="@+id/item_course_time_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程开始时间">
+
+
+                    <com.cn.coachs.util.superdatepicker.TimePicker
+                        android:id="@+id/item_course_time_1_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程时长">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_course_time_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    android:layout_marginTop="@dimen/btn_topbar_paddingHorizontal"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="人数上限">
+
+                    <com.cn.coachs.util.superdatepicker.CustomNumberPicker
+                        android:id="@+id/item_max_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/item_address"
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="none"
+                    app:item_showDivider="true"
+                    app:item_titleText="课堂地址">
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    style="@style/settings_item_layout_single"
+                    app:item_accessoryType="arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="课程简介">
+
+                    <EditText
+                        android:id="@+id/item_myhospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SmallListHeight"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/trans_setting_item_selector"
+                        android:focusable="false"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="80dip"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/font_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+                </com.cn.coachs.ui.chat.common.view.SettingItem>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center">
+
+                    <com.cn.coachs.util.FButton
+                        android:id="@+id/submit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:minHeight="@dimen/demo_button_min_height"
+                        android:minWidth="@dimen/demo_button_min_width"
+                        android:text="下一页"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        fbutton:buttonColor="@color/blue_second"
+                        fbutton:cornerRadius="1dp"
+                        fbutton:shadowEnabled="false" />
+                </LinearLayout>
+                <!--<coachschat.common.view.SettingItem-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="true"-->
+                <!--app:item_titleText="@string/person_goodat">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/item_mygoodat"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/SmallListHeight"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@drawable/trans_setting_item_selector"-->
+                <!--android:focusable="false"-->
+                <!--android:gravity="center_vertical|right"-->
+                <!--android:paddingLeft="80dip"-->
+                <!--android:paddingRight="40dip"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/font_gray"-->
+                <!--android:textCursorDrawable="@null"-->
+                <!--android:textSize="14sp" />-->
+                <!--</coachschat.common.view.SettingItem>-->
+
+                <!--<coachschat.common.view.SettingItem-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="true"-->
+                <!--app:item_titleText="@string/person_introduction">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/item_myintroduction"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/SmallListHeight"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@drawable/trans_setting_item_selector"-->
+                <!--android:focusable="false"-->
+                <!--android:gravity="center_vertical|right"-->
+                <!--android:paddingLeft="80dip"-->
+                <!--android:paddingRight="40dip"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/font_gray"-->
+                <!--android:textCursorDrawable="@null"-->
+                <!--android:textSize="14sp" />-->
+                <!--</coachschat.common.view.SettingItem>-->
+
+                <!--<coachschat.common.view.SettingItem-->
+                <!--android:id="@+id/item_myphoto"-->
+                <!--style="@style/settings_item_layout_single"-->
+                <!--app:item_accessoryType="arrow"-->
+                <!--app:item_showDivider="false"-->
+                <!--app:item_titleText="@string/person_photo"></coachschat.common.view.SettingItem>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

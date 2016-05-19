@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dip"
+            android:layout_weight="6"
+            android:background="@drawable/ic_alipay_wap"
+            android:paddingLeft="@dimen/CheckBoxWidth" />
+
+        <EditText
+            android:id="@+id/gatherAccount"
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:hint="支付宝账户/手机号"
+            android:maxLength="11"
+            android:numeric="integer"
+            android:textColor="@color/bg_black"
+            android:textColorHint="@color/font_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_weight="6"
+            android:paddingLeft="@dimen/CheckBoxWidth"
+            android:text="姓名" />
+
+        <EditText
+            android:id="@+id/realName"
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:hint="请输入真实姓名"
+            android:textColor="@color/bg_black"
+            android:textColorHint="@color/font_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:padding="10dip"
+        android:paddingLeft="@dimen/CheckBoxWidth"
+        android:text="可提现余额：58.00元"
+        android:textColor="@color/font_gray"
+        android:textSize="16dip" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_weight="6"
+            android:paddingLeft="@dimen/CheckBoxWidth"
+            android:text="金额" />
+
+        <EditText
+            android:id="@+id/withdrawalAmount"
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dip"
+            android:hint="提现金额"
+            android:numeric="decimal"
+            android:textColor="@color/bg_black"
+            android:textColorHint="@color/font_gray" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_weight="6"
+            android:paddingLeft="@dimen/CheckBoxWidth"
+            android:text="密码" />
+
+        <EditText
+            android:id="@+id/et_passward"
+            style="@style/CCPFontPreferenceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/SmallListHeight"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dip"
+            android:hint="请输入密码"
+            android:password="true"
+            android:textColor="@color/bg_black"
+            android:textColorHint="@color/font_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:padding="10dip"
+        android:paddingLeft="@dimen/CheckBoxWidth"
+        android:visibility="gone"
+        android:text="每笔限额50000.00元，本日还可以提现3次"
+        android:textColor="@color/font_gray"
+        android:textSize="16dip" />
+
+    <com.cn.coachs.util.FButton
+        android:id="@+id/drawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/LargePadding"
+        android:layout_marginRight="@dimen/LargePadding"
+        android:layout_marginTop="@dimen/NormalListHeight"
+        android:gravity="center"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:text="确认提现"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        fbutton:buttonColor="@color/red"
+        fbutton:shadowEnabled="false" />
+
+</LinearLayout>

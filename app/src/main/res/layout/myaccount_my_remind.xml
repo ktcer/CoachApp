@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:orientation="vertical"
+    android:paddingBottom="1dip" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.cn.coachs.ui.chat.common.view.SettingItem
+                android:id="@+id/remind_record"
+                style="@style/settings_item_layout_single"
+                app:item_accessoryType="switchbutton"
+                app:item_showDivider="false"
+                app:item_titleText="工作日记提醒" />
+
+            <TextView
+                android:id="@+id/tvRemindRate"
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/LargestPadding"
+                android:paddingLeft="@dimen/CheckBoxWidth"
+                android:text="提醒频率:" />
+
+            <LinearLayout
+                android:id="@+id/layoutOne"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/frequency"
+                    style="@style/settings_item_layout_single"
+                    app:item_showDivider="false"
+                    app:item_titleText="每天" />
+
+                <TextView
+                    android:id="@+id/tvRemindTime"
+                    style="@style/CCPFontPreferenceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/LargestPadding"
+                    android:paddingLeft="@dimen/CheckBoxWidth"
+                    android:text="提醒时长:" />
+
+                <com.cn.coachs.ui.chat.common.view.SettingItem
+                    android:id="@+id/time_length"
+                    style="@style/settings_item_layout_single"
+                    app:item_showDivider="false"
+                    app:item_titleText="永久" />
+
+                <TextView
+                    android:id="@+id/tvMorningRemind"
+                    style="@style/CCPFontPreferenceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/LargestPadding"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/CheckBoxWidth"
+                    android:text="上午提醒:" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/CheckBoxWidth"
+                            android:text="08:30" />
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_marginRight="@dimen/CheckBoxWidth"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="查看新增粉丝" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dip"
+                        android:background="@color/gray_third" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/CheckBoxWidth"
+                            android:text="09:00" />
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_marginRight="@dimen/CheckBoxWidth"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="进行爱护" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTwo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/CCPFontPreferenceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/LargestPadding"
+                    android:paddingLeft="@dimen/CheckBoxWidth"
+                    android:text="下午提醒:" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/CheckBoxWidth"
+                            android:text="14:30" />
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_marginRight="@dimen/CheckBoxWidth"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="进行爱护" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dip"
+                        android:background="@color/gray_third" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/CheckBoxWidth"
+                            android:text="15:30" />
+
+                        <TextView
+                            style="@style/CCPFontPreferenceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/SmallListHeight"
+                            android:layout_marginRight="@dimen/CheckBoxWidth"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="查看新增粉丝" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/CCPFontPreferenceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/LargestPadding"
+                    android:paddingLeft="@dimen/CheckBoxWidth" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

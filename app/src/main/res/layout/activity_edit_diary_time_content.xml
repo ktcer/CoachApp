@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/abc_action_bar_default_height"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:gravity="center" >
+        
+        <ListView
+            android:id="@+id/check_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:divider="@color/color_gray"
+            android:choiceMode="multipleChoice"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none" >
+        </ListView>
+        
+        <View
+            android:id="@+id/item_bottom_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_divider_height"
+            android:layout_below="@id/check_listview"
+            android:background="@color/list_divider" />
+        
+<!--         <CheckBox -->
+<!--             android:id="@+id/afternoon" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_vertical" -->
+<!--             android:layout_weight="1" -->
+<!--             android:text="监测午后血压心率" -->
+<!--             android:textColor="@color/background_dark" /> -->
+
+<!--         <CheckBox -->
+<!--             android:id="@+id/sport" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_vertical" -->
+<!--             android:layout_weight="1" -->
+<!--             android:text="监测运动后血压心率" -->
+<!--             android:textColor="@color/background_dark" /> -->
+
+<!--         <CheckBox -->
+<!--             android:id="@+id/morning" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_vertical" -->
+<!--             android:layout_weight="1" -->
+<!--             android:text="监测清晨血压心率" -->
+<!--             android:textColor="@color/background_dark" /> -->
+
+<!--         <CheckBox -->
+<!--             android:id="@+id/sleep" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_vertical" -->
+<!--             android:layout_weight="1" -->
+<!--             android:text="监测睡前血压心率" -->
+<!--             android:textColor="@color/background_dark" /> -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/SmallPadding"
+        android:layout_marginRight="@dimen/SmallPadding"
+        android:layout_weight="2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="新增"
+            android:textColor="@color/background_dark" />
+
+        <com.cn.coachs.ui.chat.common.base.CCPEditText
+            android:id="@+id/add_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:imeOptions="actionDone"
+            android:textColor="@color/background_dark">
+
+            <requestFocus />
+        </com.cn.coachs.ui.chat.common.base.CCPEditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.cn.coachs.ui.chat.common.base.CCPTextView
+            android:id="@+id/no_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navibar_background"
+            android:gravity="center"
+            android:padding="@dimen/SmallPadding"
+            android:text="此段时间不设项目" 
+            android:textColor="@color/white"/>
+
+        <!-- <coachschat.common.base.CCPTextView -->
+        <!-- android:id="@+id/confirm" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="确定" /> -->
+    </LinearLayout>
+
+</LinearLayout>

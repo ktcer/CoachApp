@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_second"
+    android:orientation="vertical"
+    android:paddingBottom="1dip" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/coin_top_frag"
+            android:name="com.cn.coachs.ui.patient.others.myaccount.CoinTopFrag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/NormalPadding" />
+
+        <fragment
+            android:id="@+id/coin_bottom_frag"
+            android:name="com.cn.coachs.ui.patient.others.myaccount.CoinBottomFrag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:padding="@dimen/NormalPadding" />
+    </LinearLayout>
+
+</LinearLayout>

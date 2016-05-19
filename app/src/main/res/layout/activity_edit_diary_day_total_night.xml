@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/one"
+                style="@style/settings_item_layout_single"
+                app:item_time="18:30"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/two"
+                style="@style/settings_item_layout_single"
+                app:item_time="19:00"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/three"
+                style="@style/settings_item_layout_single"
+                app:item_time="19:30"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/four"
+                style="@style/settings_item_layout_single"
+                app:item_time="20:00"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/five"
+                style="@style/settings_item_layout_single"
+                app:item_time="20:30"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/six"
+                style="@style/settings_item_layout_single"
+                app:item_time="21:00"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/seven"
+                style="@style/settings_item_layout_single"
+                app:item_time="21:30"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/eight"
+                style="@style/settings_item_layout_single"
+                app:item_time="22:00"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/nine"
+                style="@style/settings_item_layout_single"
+                app:item_time="22:30"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/ten"
+                style="@style/settings_item_layout_single"
+                app:item_time="23:00"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+            <com.cn.coachs.ui.patient.main.healthdiary.EditDiaryDayItem
+                android:id="@+id/eleven"
+                style="@style/settings_item_layout_single"
+                app:item_time="23:30"
+                app:item_titleText="姓名"
+                app:line_visiable="true" />
+
+<!--             <coachspatient.main.healthdiary.EditDiaryDayItem -->
+<!--                 android:id="@+id/twelve" -->
+<!--                 style="@style/settings_item_layout_single" -->
+<!--                 app:item_time="18:00" -->
+<!--                 app:item_titleText="姓名" -->
+<!--                 app:line_visiable="true" /> -->
+
+<!--             <coachspatient.main.healthdiary.EditDiaryDayItem -->
+<!--                 android:id="@+id/thiteen" -->
+<!--                 style="@style/settings_item_layout_single" -->
+<!--                 app:item_time="19:00" -->
+<!--                 app:item_titleText="姓名" -->
+<!--                 app:line_visiable="true" /> -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

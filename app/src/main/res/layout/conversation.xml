@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (c) 2013 The CCP project authors. All Rights Reserved.
+ 
+     Use of this source code is governed by a Beijing Speedtong Information Technology Co.,Ltd license
+     that can be found in the LICENSE file in the root of the web site.
+ 
+     http://www.yuntongxun.com
+ 
+     An additional intellectual property rights grant can be found
+     in the file PATENTS.  All contributing project authors may
+     be found in the AUTHORS file in the root of the source tree.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_ui_container"
+    style="@style/NavPage" >
+
+    <ListView
+        android:id="@+id/main_chatting_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0.0px"
+        android:listSelector="@null" />
+
+    <TextView
+        android:id="@+id/empty_conversation_tv"
+        style="@style/CCPFontEmptyMsgLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/gray_second"
+        android:singleLine="false"
+        android:text="@string/main_empty_conversation"
+        android:visibility="gone" />
+
+    <com.cn.coachs.util.floatactionbutton.FloatingActionButton
+        android:id="@+id/fab_sendall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/qunfa"
+        app:fab_colorNormal="@color/blue_second"
+        app:fab_colorPressed="@color/progressbutton_presscolor"
+        app:fab_colorRipple="@color/blue_third"
+        app:fab_type="normal" />
+
+</RelativeLayout>

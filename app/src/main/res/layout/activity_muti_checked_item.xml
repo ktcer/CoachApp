@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/abc_action_button_min_width"
+    android:layout_marginLeft="@dimen/abc_action_bar_subtitle_bottom_half_margin"
+    android:layout_marginRight="@dimen/abc_action_bar_subtitle_bottom_half_margin"
+    android:orientation="horizontal" >
+
+    <com.cn.coachs.ui.chat.common.base.CCPTextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/background_dark"
+        android:textSize="@dimen/NormalTextSize"
+        android:layout_weight="10"/>
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:focusableInTouchMode="false" />
+
+</LinearLayout >

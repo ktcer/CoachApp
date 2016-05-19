@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/list_biankuang">
+        <TextView 
+	        android:id="@+id/date_myTestInfo"
+	        android:layout_width="150dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_height="20dp"
+	        android:layout_marginLeft="20dp"
+			style="@style/text_small_style"/>
+   	 	<TextView 
+	        android:id="@+id/score_myTestInfo"
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="20dp"
+	        style="@style/text_style"/>
+    	<TextView 
+	        android:id="@+id/result_myTestInfo"
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="10dp"
+	        android:layout_height="20dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginBottom="10dp"
+	        style="@style/text_style"/>    
+    </LinearLayout>
+
+</LinearLayout>

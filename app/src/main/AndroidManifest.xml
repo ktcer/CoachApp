@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cn.coachs"
+    android:installLocation="auto"
+    android:versionCode="5"
+    android:versionName="1.0.4 Build 20151115" >
+
+    <!-- 应用运行要求的最低API 11 22-->
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22"
+        tools:overrideLibrary="com.umeng.socialize.evernote,com.umeng.socialize.pinterest"/>
+    <!-- 11   6 -->
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+    <!-- 添加可以向外拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 照相机权限权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 阅读消息 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 写入消息 -->
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <!-- 接收消息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- 状态栏通知 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- GPS位置获取 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 友盟应用统计插件使用 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for My App"
+        android:targetPackage="newcom.com.cn.bus" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.cn.coachs.ui.AppMain"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AnimActivityTheme" >
+        <meta-data
+            android:name="LOGGING"
+            android:value="true" />
+        <meta-data
+            android:name="ALPHA"
+            android:value="true" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56a8d417e0f55a3cd400000c" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Aihu" />
+
+        <uses-library android:name="android.test.runner" />
+
+        <!-- 友盟自动提示更新 -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService" >
+        </service>
+        <service android:name="com.cn.coachs.service.ServiceGps" >
+            <intent-filter>
+                <action android:name="com.cn.coachs.service.GpsService" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name="com.cn.coachs.service.ServiceUpdate" >
+            <intent-filter>
+                <action android:name="com.cn.coachs.service.UpdateService" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+
+        <!-- 云通讯相关 -->
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- *************************    分享相关的注册 START **************************** -->
+        <!-- 分享内容编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105100060" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.chat.ui.ActivityHealthAssist"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 聊天主界面 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.ActivityHealthAssist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityClassRoom"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityMemberInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 会话消息聊天主界面 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.chatting.ChattingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 联系人详情选项卡 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.contact.ContactDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 手机系统联系人 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.contact.MobileContactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 发送预览图片 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.chatting.ImagePreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:process=":tools"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent" />
+        <!-- 查看聊天图片 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.chatting.ImageGalleryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.chatting.ImageGralleryPagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 文件浏览器 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.plugin.FileExplorerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!-- 群组 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.CreateGroupActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 联系人选择 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.contact.ContactSelectListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 手机联系人选择 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.contact.MobileContactSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 设置页面 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.settings.ActivityMsgSettings"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.contact.GroupCardSelectUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.GroupInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 群组搜索 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.SearchGroupActivity"
+            android:label="@string/title_activity_search_group" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.BaseSearch"
+            android:label="@string/title_activity_search_group"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.settings.EditConfigureActivity"
+            android:label="@string/title_activity_edit_configure" >
+        </activity>
+        <!-- 申请加入群组 -->
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.ApplyWithGroupPermissionActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.group.GroupNoticeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.settings.LoginSettingActivity"
+            android:label="@string/title_activity_login_setting" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.chat.ui.settings.SettingPersionInfoActivity"
+            android:label="@string/title_activity_setting_persion_info" >
+        </activity>
+         <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.cn.coachs.barcode.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <!-- (0)欢迎页面 -->
+        <activity
+            android:name="com.cn.coachs.ui.welcome.ActivityWelcomePage"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+            <!-- 指定为该程序的入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.Setting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.barcode.ericssonlabs.BarCodeTestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.Remind"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityDrawMoney"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.PlayAlarmAty"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.RemindDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.Performance"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.Purse"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.RegisterInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.IncomeDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityCoin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.performance.Performance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityPersonalInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ImageBrowser"
+            android:theme="@style/ImageBrowser" >
+        </activity>
+
+        <!-- (0)首页 HOME -->
+
+        <activity
+            android:name="com.cn.coachs.ui.patient.homepage.doctorinterview.DoctorInterview"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.TabActivityMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 我的护理 -->
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.AddAppoint"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myorders.ActivityMyOrdersList"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.NursePage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.MyPlan"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.MyPlanInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.MyStatement"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.AddMyStatement"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mytest.ActivityMyTest"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mytest.ActivityMyTestInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myhealthrecord.ActivityPersonnalData"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.alarm.ActivitySetNotificationTime"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.AppointmentPage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myorders.ActivityMyOrderInfo"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx349b63ceddcb1d64" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.myTestCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.DetectionCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.MyStatementHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.HealthRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.HealthRecordDeail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.mycare.AddHealthDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的资源 -->
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myfavor.CollectPaper"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myfavor.ActivityCollectNurses"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.myres.ActivitySubscribePaper"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.myres.mycustomer.ActivityMyCustomer"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.PicAdvisiry"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.AdvisiryHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mydevice.MyDevice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.patient.others.myfamily.ActivityMyFamily"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.patient.others.myfamily.ActivityAddFamilyMember"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.patient.others.myfamily.ActivityMyFamilyMemberPage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myfavor.CollectPaperActicle"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.alarm.ActivityRecoveryRemind"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mydevice.DeviceDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.patient.others.myfamily.ActivityAddNews"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityHealthPostList"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityHealthPostDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置 -->
+        <activity
+            android:name="com.cn.coachs.patient.setting.ActivitySetting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.message.ActivityMessageCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.setting.ActivityHelp"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.setting.ActivityAboutUs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".my.ActivityMyAccountCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.choosepicture.ChoosePicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.choosepicture.PhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.choosepicture.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityLogin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityMyOverage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityMyIntegral"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.message.ActivityMessageCenterInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityRegister"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityRegisterInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >          
+        </activity>
+
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityMyPhotos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityMyCode"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.myaccount.ActivityResetPassword"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.ActivitySubmitInformation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.test.ActivityTestPersonInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.test.ActivityNoTest"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityFansTestReport"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityFansTestReportDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityFansSetRemind"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.bluetooth.BluetoothFallSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.record.audio.ActivityRecordAudio"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 朋友圈 -->
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mement.ActivityMyMoment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mement.ClinicAppoint"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mement.ActivityPost"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mement.ActivityMyPost"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.others.mement.ActivityNewPost"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- (0)引用页（工具页） Util 数据呈现页面 -->
+        <activity
+            android:name="com.cn.coachs.ui.MapRouteLine"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.chosenurse.ChoseNurse"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- home page -->
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.HealthDiaryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityHealthDiaryDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityHealthTraningGuide"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.ActivityAddInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityChoosePeopleNum"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.homepage.doctorinterview.VideoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.homepage.doctorinterview.VideoPlay"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.alarm.AlarmScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.alarm.AlarmScreenVoice"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.alarm.AlarmScreenText"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.model.healthpost.BeanItemOfSummary"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.mynurse.asynctask.ActivitySummary"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityPhotography"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.detectioncenter.ActivityHistrionicDataCenter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.detectioncenter.ActivityDetectionCenter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="xxt.com.cn.map.LocationManager"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.aihu.ui.patient.homepage.InterviewTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 健康日记 -->
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityHealthDiary"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.test.ActivityEvaluationCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthclass.ActivityDetailWebService"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".baidumap.AcitivityBaiduMap"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 录像页面 -->
+        <activity
+            android:name="com.cn.coachs.ui.record.video.ActivityVideoRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 支付选择 -->
+        <activity
+            android:name="com.cn.coachs.ui.paychoose.ActivityPayChoose"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.detectioncenter.ActivityFansDetectionInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityEditDiary"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityEditDiaryDay"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityEditDiaryDayDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivityFansList"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.cn.coachs.ui.patient.main.healthdiary.ActivitySearchHospital"
+            android:screenOrientation="portrait" 
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+        </activity>
+        
+        <activity android:name="com.cn.coachs.util.customgallery.PhotoChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme"/>
+        <activity android:name="com.cn.coachs.util.customgallery.PhotoCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme"/>
+
+        <!--教练-->
+        <activity
+            android:name="com.cn.coachs.my.ActivityMyPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.my.ActivityPublishCourse">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.my.ActivityPublishCourseImage"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.my.ActivityMyOrderInfo"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.my.ActivityMyOrdersList"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.my.ActivityMyCoursrList"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.cn.coachs.comment.ActivityQueryCoachMomment"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 支付宝 alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- weixin -->
+        <activity
+            android:name="com.cn.coachs.PayActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/myTransparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx349b63ceddcb1d64" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cn.coachs.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <receiver android:name="com.cn.coachs.weixin.pay.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- alipay sdk end -->
+
+
+        <!-- 是否支持ip版本的扩展功能 -->
+        <meta-data
+            android:name="SUPPORT_EXTRA_FEATURE"
+            android:value="true" />
+        <!-- 电话服务SDK配置结束 -->
+
+
+        <!-- 提醒功能 -->
+
+        <receiver android:name="com.cn.coachs.broadcast.AlarmManagerReceiver" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            <!-- </intent-filter> -->
+        </receiver>
+
+        <service android:name="com.cn.coachs.service.ServiceNotification" />
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+</manifest>

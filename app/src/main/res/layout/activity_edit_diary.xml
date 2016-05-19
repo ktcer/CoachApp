@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/abc_action_bar_default_height"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding"
+            android:gravity="center"
+            android:text="请选择方案开始日期" >
+        </TextView>
+
+        <DatePicker
+            android:id="@+id/date_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/abc_action_bar_icon_vertical_padding"
+            android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding"
+            android:background="@drawable/dialog_picker_bg"
+            android:calendarViewShown="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical" 
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/input_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/abc_action_bar_icon_vertical_padding"
+            android:gravity="center"
+            android:text="方案时长(周)" />
+
+        <!-- <Spinner -->
+        <!-- android:id="@+id/length" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginBottom="@dimen/abc_action_bar_icon_vertical_padding" -->
+        <!-- android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding" /> -->
+        <!-- android:background="@drawable/trans_setting_item_selector" -->
+
+        <com.cn.coachs.util.PickerView
+            android:id="@+id/item_mytall"
+            style="@style/text_style"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/dialog_picker_bg"
+            android:visibility="visible" />
+
+<!--         <coachsl.superpicker.CustomNumberPicker -->
+<!--         android:id="@+id/item_mytall" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:background="@drawable/dialog_picker_bg" -->
+<!--         android:focusable="false" -->
+<!--         android:gravity="center_vertical|right" -->
+<!--         android:paddingRight="40dip" -->
+<!--         android:textCursorDrawable="@null" -->
+<!--         android:textSize="14sp" /> -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="settings_item">
+        <item>我的账户</item>
+        <item>消息中心</item>
+        <item>设置</item>
+        <item>帮助</item>
+        <item>关于</item>
+    </string-array>
+    <string-array name="departments">
+        <item>跌倒科</item>
+        <item>心脑血管科</item>
+        <item>老年痴呆科</item>
+        <item>肾病科</item>
+        <item>外科</item>
+    </string-array>
+    <string-array name="sorting">
+        <item>智能排序</item>
+        <item>级别排序</item>
+    </string-array>
+    
+     <string-array name="gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="selection">
+        <item>热门</item>
+        <item>跑步</item>
+        <item>急速减脂</item>
+        <item>健身</item>
+        <item>游泳</item>
+        <item>瑜伽</item>
+        <item>球类</item>
+        <item>企业课</item>
+    </string-array>
+
+    <string-array name="coursefonction">
+        <item>优美体形</item>
+        <item>有氧减脂</item>
+        <item>增肌减脂</item>
+        <item>肌肉拉伸</item>
+        <item>减脂瘦身</item>
+        <item>魔鬼身材</item>
+        <item>提升体能</item>
+        <item>高雅动作</item>
+        <item>强效增肌</item>
+        <item>修复损伤</item>
+        <item>练马甲线</item>
+        <item>畅通经络</item>
+    </string-array>
+    <string-array name="teachertime">
+        <item>1-2年</item>
+        <item>3-5年</item>
+        <item>5年以上</item>
+    </string-array>
+    <string-array name="coursetime">
+        <item>30分钟</item>
+        <item>45分钟</item>
+        <item>60分钟</item>
+        <item>75分钟</item>
+        <item>90分钟</item>
+        <item>105分钟</item>
+        <item>120分钟</item>
+        <item>135分钟</item>
+        <item>150分钟</item>
+        <item>165分钟</item>
+        <item>180分钟</item>
+    </string-array>
+    <string-array name="teacherway">
+        <item>上门</item>
+        <item>驻场</item>
+        <item>上门和驻场</item>
+    </string-array>
+    <string-array name="teacheraddress_arry">
+        <item>朝阳区</item>
+        <item>西城区</item>
+        <item>崇文区</item>
+        <item>宣武区</item>
+        <item>东城区</item>
+        <item>丰台区</item>
+        <item>石景山区</item>
+        <item>海淀区</item>
+        <item>门头沟区</item>
+        <item>房山区</item>
+        <item>通州区</item>
+        <item>顺义区</item>
+        <item>平谷区</item>
+        <item>密云县</item>
+        <item>延庆县</item>
+    </string-array>
+
+    <string-array name="courseaim">
+        <item>塑形</item>
+        <item>排汗</item>
+        <item>人鱼线</item>
+        <item>增肌</item>
+        <item>提臀</item>
+        <item>美胸</item>
+        <item>瘦腿</item>
+        <item>马甲线</item>
+        <item>蝴蝶袖</item>
+        <item>产后修复</item>
+    </string-array>
+
+
+    <string-array name="nurseType">
+        <item>选择类别</item>
+        <item>收藏</item>
+        <item>关注</item>
+    </string-array>
+    
+   <string-array name="subscribePaperType">
+        <item>选择类别</item>
+        <item>高血压</item>
+        <item>心血管</item>
+        <item>白血病</item>
+    </string-array>
+    
+   <string-array name="chartdate">
+        <item>前7条</item>
+        <item>最近7条</item>
+        <item>后7条</item>
+    </string-array>
+    
+   <string-array name="familytype">
+        <item>家庭相册</item>
+        <!--<item>监测数据</item>-->
+        <item>地理位置</item>
+        <item>报警信息</item>
+    </string-array>
+    
+   <string-array name="choseDepartment">
+       <item>内科</item>
+       <item>外科</item>
+       <item>营养</item>
+       <item>健身</item>
+       <item>心理</item>
+       <item>其他</item>
+   </string-array>
+   
+   <string-array name="bloodsugar1">
+        <item>凌晨</item>
+        <item>空腹</item>
+        <item>早餐后</item>
+        <item>午餐前</item>
+   </string-array>
+   <string-array name="bloodsugar2">
+        <item>午餐后</item>
+        <item>晚餐前</item>
+        <item>晚餐后</item>
+        <item>睡前</item>
+    </string-array>
+    
+    <string-array name="chat_menu">
+        <item>删除</item>
+        <item>复制消息</item>
+    </string-array>
+    <string-array name="group_join_model">
+        <item>默认直接加入</item>
+        <item>需要身份验证</item>
+    </string-array>
+</resources>

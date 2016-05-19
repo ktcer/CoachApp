@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:my="http://schemas.android.com/apk/res/com.cn.coachs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/main_top" />
+
+    <TextView
+        android:id="@+id/all_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="总价￥1000"
+        android:textColor="@color/red"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+              android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/article_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用第三方支付平台支付："
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/all_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥1000"
+                android:textColor="@color/black"
+                 android:layout_gravity="center"
+                android:layout_toRightOf="@+id/article_tv1"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        
+
+
+   <com.cn.coachs.ui.paychoose.PayRadioGroup
+    android:id="@+id/genderGroup" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_margin="20dp"
+    my:orientation="vertical" 
+    > 
+    <com.cn.coachs.ui.paychoose.PayRadioPurified
+        android:id="@+id/p1"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:background="@drawable/bg_border_selector"
+		my:radio="@drawable/radio"
+		my:logo="@drawable/ic_alipay_plugin"
+        my:title="微信支付"		
+		my:desc="推荐安装微信5.0及以上版本的使用"
+        /> 
+    <com.cn.coachs.ui.paychoose.PayRadioPurified
+        android:id="@+id/p2"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:background="@drawable/bg_border_selector"
+        my:radio="@drawable/radio"
+        my:logo="@drawable/ic_alipay_wap"
+		my:title="支付宝支付"
+		my:desc="推荐有支付宝帐号的用户使用"
+        /> 
+	<com.cn.coachs.ui.paychoose.PayRadioPurified
+	    android:id="@+id/p3"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:background="@drawable/bg_border_selector"
+		my:radio="@drawable/radio"
+		my:logo="@drawable/ic_uppay_plugin"
+		my:title="银联支付"
+		android:visibility="gone"
+		my:desc="支持手机网银支付"
+        /> 
+
+	</com.cn.coachs.ui.paychoose.PayRadioGroup>
+    </LinearLayout>
+    
+        <TextView
+        android:id="@+id/go_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="去支付"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:textSize="20sp" />
+
+</LinearLayout>

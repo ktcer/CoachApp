@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="true"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:queryHint="请输入要查找的医院"
+        android:visibility="gone" >
+    </SearchView>
+
+    <com.cn.coachs.ui.patient.others.myaccount.ClearEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search"
+        android:cursorVisible="true"
+        android:drawableLeft="@drawable/searchb"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/close"
+        android:hint="填写医院"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:textColor="#696969"
+        android:textColorHint="#696969"
+        android:textSize="14sp" >
+    </com.cn.coachs.ui.patient.others.myaccount.ClearEditText>
+
+    <View
+        android:id="@+id/item_bottom_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_divider_height"
+        android:background="@color/list_divider" />
+
+    <ListView
+        android:id="@+id/listHospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="visible" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/noHospital"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="暂无搜索结果"
+        android:visibility="gone" />
+
+</LinearLayout>

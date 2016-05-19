@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (c) 2013 The CCP project authors. All Rights Reserved.
+ 
+     Use of this source code is governed by a Beijing Speedtong Information Technology Co.,Ltd license
+     that can be found in the LICENSE file in the root of the web site.
+ 
+     http://www.yuntongxun.com
+ 
+     An additional intellectual property rights grant can be found
+     in the file PATENTS.  All contributing project authors may
+     be found in the AUTHORS file in the root of the source tree.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ecdemo="http://schemas.android.com/apk/res-auto"
+    style="@style/NavPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:background="@color/gray_second"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130.0dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="130.0dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/personal_center_bg"
+            android:paddingTop="10dip" >
+
+            <ImageView
+                android:id="@+id/desc"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="desc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:paddingTop="20dp" >
+
+                <com.cn.coachs.ui.chat.ui.chatting.base.EmojiconTextView
+                    android:id="@+id/contact_nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="16dp"
+                    android:singleLine="true"
+                    android:text="{name}"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/contact_numer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical"
+                    android:text="number"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_new_msg_sound"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="switchbutton"
+            ecdemo:item_showDivider="true"
+            ecdemo:item_titleText="@string/settings_new_msg_notification_sound" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_new_msg_shake"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="switchbutton"
+            ecdemo:item_showDivider="false"
+            ecdemo:item_titleText="@string/settings_new_msg_notification_shake" />
+
+        // 登陆设置
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_serverIP"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="arrow"
+            android:layout_marginTop="@dimen/LargerPadding"
+            ecdemo:item_showDivider="true"
+            android:visibility="gone"
+            ecdemo:item_titleText="@string/settings_server_address" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_appkey"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="arrow"
+            ecdemo:item_showDivider="true"
+            android:visibility="gone"
+            ecdemo:item_titleText="@string/settings_appkey" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_token"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="arrow"
+            ecdemo:item_showDivider="false"
+            android:visibility="gone"
+            ecdemo:item_titleText="@string/settings_apptoken" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/settings_update"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_accessoryType="arrow"
+            ecdemo:item_showDivider="false"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/LargerPadding"
+            ecdemo:item_titleText="@string/demo_current_version" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/setting_exit"
+            style="@style/settings_item_layout_single"
+            android:layout_marginTop="@dimen/SmallListHeight"
+            ecdemo:item_showDivider="true"
+            android:visibility="gone"
+            ecdemo:item_titleText="@string/settings_exit_title" />
+
+        <com.cn.coachs.ui.chat.common.view.SettingItem
+            android:id="@+id/setting_switch"
+            android:visibility="gone"
+            style="@style/settings_item_layout_single"
+            ecdemo:item_showDivider="false"
+            ecdemo:item_titleText="@string/settings_switch_title" />
+    </LinearLayout>
+
+</ScrollView>

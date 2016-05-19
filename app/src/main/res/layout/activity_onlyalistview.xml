@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="@null"
+            android:transcriptMode="alwaysScroll" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/noTestLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:singleLine="false"
+                android:text="该粉丝还没有进行身体状况测评哦，快提醒他进行测评吧！您也可以直接为该粉丝制定方案。"
+                android:textColor="@color/font_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.cn.coachs.util.FButton
+                    android:id="@+id/btn_remindtest"
+                    android:layout_width="0dip"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dip"
+                    android:layout_weight="1"
+                    android:text="提醒测评"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    fbutton:buttonColor="@color/blue_second"
+                    fbutton:cornerRadius="1dp"
+                    fbutton:shadowEnabled="false" />
+
+                <com.cn.coachs.util.FButton
+                    android:id="@+id/btn_setDiary"
+                    android:layout_width="0dip"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dip"
+                    android:layout_weight="1"
+                    android:text="制定方案"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    fbutton:buttonColor="@color/blue_second"
+                    fbutton:cornerRadius="1dp"
+                    fbutton:shadowEnabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
