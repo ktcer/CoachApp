@@ -4,5 +4,5 @@
 
 大致功能：跟用户聊天，发布地理课程，查看课程，查看我的资产，查看新员评价
 
-![image](https://github.com/ktcer/CoachApp/blob/master/Screenshot_2016-05-19-20-47-41.jpeg）
-![image](https://github.com/ktcer/CoachApp/blob/master/Screenshot_2016-05-19-20-48-28.jpeg）
+![image](https://github.com/ktcer/CoachApp/blob/master/Screenshot_2016-05-19-20-47-41.jpeg)
+![image](https://github.com/ktcer/CoachApp/blob/master/Screenshot_2016-05-19-20-48-28.jpeg)
